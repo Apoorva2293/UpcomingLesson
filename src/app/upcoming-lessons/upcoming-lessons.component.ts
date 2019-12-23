@@ -15,6 +15,10 @@ location;
 
   ngOnInit() {
     this.upcomingLessonService.getEvents()
-    .subscribe(item => this.events = item);
-  }
+
+    .subscribe(item => this.events = item.sort((a: any, b: any) =>
+
+    new Date(a.date).getTime() - new Date(b.date).getTime()
+
+    ));
 }
