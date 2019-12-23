@@ -5,12 +5,12 @@
       <igx-card type="outlined">
         <div *ngFor="let event of event.value">
         <igx-card-header>
-          <div class="col-md-7">
-            <img [src]="event.subjectPhotoUrl" class="img-thumbnail rounded-circle">
+          <div class="col-md-7 pl-0">
+            <img [src]="event.subjectPhotoUrl" class="rounded-circle" width = "9%">
             <label name="title" class="font-weight-bold ml-1">{{event.title}}</label>
           </div>
           <div class="col-md-3">
-            <img [src]="event.instructorPhotoUrl" class="img-thumbnail rounded-circle">
+            <img [src]="event.instructorPhotoUrl" class="rounded-circle" width = "20%">
             <label name="authorName" class="ml-1">
               <small class="font-weight-bold text-dark">{{event.instructorName}}</small>
             </label>
@@ -20,7 +20,7 @@
             <small class="font-weight-bold text-dark">{{ event.time | rangeTime }}</small>
             </label>
           </div>
-          <igx-card-content class="pt-0 pb-0 pl-1">
+          <igx-card-content class="pt-0 pb-0 pl-2">
             <p class="col-md-7 pl-2 ml-1 text-dark">{{ event.description }}</p>
           </igx-card-content>
         </igx-card-header>
